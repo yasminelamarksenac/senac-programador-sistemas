@@ -47,6 +47,7 @@
             textBoxEmail.Name = "textBoxEmail";
             textBoxEmail.Size = new Size(266, 33);
             textBoxEmail.TabIndex = 0;
+            
             // 
             // textBoxSenha
             // 
