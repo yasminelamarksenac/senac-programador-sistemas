@@ -1,6 +1,6 @@
 ﻿namespace login
 {
-    partial class Form1
+    partial class labelCadastrar
     {
         /// <summary>
         ///  Required designer variable.
@@ -38,6 +38,12 @@
             label3 = new Label();
             labelLogin = new Label();
             labelResultado = new Label();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            labelEmail = new Label();
+            label4 = new Label();
+            button2 = new Button();
+            labelResultadoCadastro = new Label();
             SuspendLayout();
             // 
             // textBoxEmail
@@ -47,7 +53,6 @@
             textBoxEmail.Name = "textBoxEmail";
             textBoxEmail.Size = new Size(266, 33);
             textBoxEmail.TabIndex = 0;
-            
             // 
             // textBoxSenha
             // 
@@ -124,12 +129,72 @@
             labelResultado.TabIndex = 8;
             labelResultado.Text = "label4";
             // 
-            // Form1
+            // textBox2
+            // 
+            textBox2.Location = new Point(915, 219);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(274, 33);
+            textBox2.TabIndex = 9;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(915, 273);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(274, 33);
+            textBox3.TabIndex = 10;
+            // 
+            // labelEmail
+            // 
+            labelEmail.AutoSize = true;
+            labelEmail.FlatStyle = FlatStyle.System;
+            labelEmail.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelEmail.Location = new Point(851, 222);
+            labelEmail.Name = "labelEmail";
+            labelEmail.Size = new Size(46, 20);
+            labelEmail.TabIndex = 11;
+            labelEmail.Text = "Email";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(833, 278);
+            label4.Name = "label4";
+            label4.Size = new Size(49, 20);
+            label4.TabIndex = 10;
+            label4.Text = "Senha";
+            // 
+            // button2
+            // 
+            button2.Location = new Point(995, 456);
+            button2.Name = "button2";
+            button2.Size = new Size(143, 30);
+            button2.TabIndex = 12;
+            button2.Text = "Cadastrar";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // labelResultadoCadastro
+            // 
+            labelResultadoCadastro.AutoSize = true;
+            labelResultadoCadastro.Location = new Point(982, 341);
+            labelResultadoCadastro.Name = "labelResultadoCadastro";
+            labelResultadoCadastro.Size = new Size(63, 25);
+            labelResultadoCadastro.TabIndex = 13;
+            labelResultadoCadastro.Text = "label5";
+            // 
+            // labelCadastrar
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(1262, 857);
+            Controls.Add(labelResultadoCadastro);
+            Controls.Add(button2);
+            Controls.Add(label4);
+            Controls.Add(labelEmail);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
             Controls.Add(labelResultado);
             Controls.Add(labelLogin);
             Controls.Add(label3);
@@ -141,7 +206,7 @@
             Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = SystemColors.ControlText;
             Margin = new Padding(5);
-            Name = "Form1";
+            Name = "labelCadastrar";
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
@@ -159,5 +224,11 @@
         private TextBox textBoxEmail;
         private Label labelLogin;
         private Label labelResultado;
+        private TextBox textBox2;
+        private TextBox textBox3;
+        private Label labelEmail;
+        private Label label4;
+        private Button button2;
+        private Label labelResultadoCadastro;
     }
 }
