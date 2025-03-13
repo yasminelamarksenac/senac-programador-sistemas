@@ -33,6 +33,9 @@
             buttonCalcular = new Button();
             buttonLimpar = new Button();
             lblResultado = new Label();
+            lblLado = new Label();
+            txtAltura = new TextBox();
+            lblAltura = new Label();
             SuspendLayout();
             // 
             // txtLado
@@ -80,11 +83,41 @@
             lblResultado.TabIndex = 4;
             lblResultado.Text = "Resultado";
             // 
+            // lblLado
+            // 
+            lblLado.AutoSize = true;
+            lblLado.Location = new Point(295, 348);
+            lblLado.Name = "lblLado";
+            lblLado.Size = new Size(62, 15);
+            lblLado.TabIndex = 5;
+            lblLado.Text = "Base/Lado";
+            // 
+                     
+            // 
+            // txtAltura
+            // 
+            txtAltura.Location = new Point(300, 422);
+            txtAltura.Name = "txtAltura";
+            txtAltura.Size = new Size(91, 23);
+            txtAltura.TabIndex = 7;
+            // 
+            // lblAltura
+            // 
+            lblAltura.AutoSize = true;
+            lblAltura.Location = new Point(278, 308);
+            lblAltura.Name = "lblAltura";
+            lblAltura.Size = new Size(42, 15);
+            lblAltura.TabIndex = 8;
+            lblAltura.Text = "Altura:";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblAltura);
+            Controls.Add(txtAltura);
+            Controls.Add(lblLado);
             Controls.Add(lblResultado);
             Controls.Add(buttonLimpar);
             Controls.Add(buttonCalcular);
@@ -103,5 +136,9 @@
         private Button buttonCalcular;
         private Button buttonLimpar;
         private Label lblResultado;
+        private Label lblLado;
+        private TextBox txtAltura;
+        private Label lblAltura;
+        private object textLado;
     }
 }
