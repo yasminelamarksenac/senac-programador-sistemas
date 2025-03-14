@@ -1,0 +1,16 @@
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\bin\Debug\net8.0-windows\Calculoesfera.exe
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\bin\Debug\net8.0-windows\Calculoesfera.deps.json
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\bin\Debug\net8.0-windows\Calculoesfera.runtimeconfig.json
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\bin\Debug\net8.0-windows\Calculoesfera.dll
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\bin\Debug\net8.0-windows\Calculoesfera.pdb
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\obj\Debug\net8.0-windows\Calculoesfera.Form1.resources
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\obj\Debug\net8.0-windows\Calculoesfera.csproj.GenerateResource.cache
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\obj\Debug\net8.0-windows\Calculoesfera.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\obj\Debug\net8.0-windows\Calculoesfera.AssemblyInfoInputs.cache
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\obj\Debug\net8.0-windows\Calculoesfera.AssemblyInfo.cs
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\obj\Debug\net8.0-windows\Calculoesfera.csproj.CoreCompileInputs.cache
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\obj\Debug\net8.0-windows\Calculoesfera.dll
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\obj\Debug\net8.0-windows\refint\Calculoesfera.dll
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\obj\Debug\net8.0-windows\Calculoesfera.pdb
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\obj\Debug\net8.0-windows\Calculoesfera.genruntimeconfig.cache
+C:\Users\yasmine.nlamark\source\repos\Calculoesfera\obj\Debug\net8.0-windows\ref\Calculoesfera.dll
