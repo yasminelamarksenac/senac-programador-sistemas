@@ -31,7 +31,6 @@ namespace Calculadora2
            
                 double lado, altura;
 
-                // Verifica qual forma foi selecionada
                 string forma = comboOperacao.SelectedItem.ToString();
 
                 if (!double.TryParse(txtLado.Text, out lado) || lado <= 0)
@@ -50,7 +49,7 @@ namespace Calculadora2
                 }
                 else
                 {
-                    altura = lado; // No quadrado, altura = lado
+                    altura = lado; 
                 }
 
                 string operacao = comboOperacao.SelectedItem.ToString();
@@ -65,7 +64,7 @@ namespace Calculadora2
                         resultado = lado * altura;
                         break;
                     case "Volume":
-                        resultado = lado * lado * altura; // Volume de um paralelepípedo (caso seja retângulo) ou cubo (caso seja quadrado)
+                        resultado = lado * lado * altura; 
                         break;
                     default:
                         MessageBox.Show("Selecione uma operação válida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
