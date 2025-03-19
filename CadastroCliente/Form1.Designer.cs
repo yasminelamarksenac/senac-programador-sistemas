@@ -1,6 +1,6 @@
 ﻿namespace CadastroCliente
 {
-    partial class Form1
+    partial class FormUsuario
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,12 +28,427 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            listBoxClientes = new ListBox();
+            buttonMostrarClientes = new Button();
+            labelNome = new Label();
+            textBoxNome = new TextBox();
+            maskedTextBoxDataNasc = new MaskedTextBox();
+            labelDataNasc = new Label();
+            labelTelefone = new Label();
+            maskedTextBoxTelefone = new MaskedTextBox();
+            labelEmail = new Label();
+            textBoxEmail = new TextBox();
+            comboBoxGenero = new ComboBox();
+            labelGenero = new Label();
+            comboBoxEtnia = new ComboBox();
+            labelEtnia = new Label();
+            checkBoxEstrangeiro = new CheckBox();
+            labelEstrangeiro = new Label();
+            radioButtonPJ = new RadioButton();
+            radioButtonPF = new RadioButton();
+            buttonAdicionarClientes = new Button();
+            textBox3 = new TextBox();
+            labelLogradouro = new Label();
+            textBox4 = new TextBox();
+            labelNumero = new Label();
+            textBox5 = new TextBox();
+            labelComplemento = new Label();
+            textBoxBairro = new TextBox();
+            label1 = new Label();
+            labelMunicipio = new Label();
+            textBoxMunicipio = new TextBox();
+            labelEstado = new Label();
+            comboBox1 = new ComboBox();
+            maskedTextBox3 = new MaskedTextBox();
+            labelCep = new Label();
+            textBoxNomeSocial = new TextBox();
+            labelNomeSocial = new Label();
+            SuspendLayout();
+            // 
+            // listBoxClientes
+            // 
+            listBoxClientes.FormattingEnabled = true;
+            listBoxClientes.ItemHeight = 15;
+            listBoxClientes.Location = new Point(208, 389);
+            listBoxClientes.Name = "listBoxClientes";
+            listBoxClientes.Size = new Size(206, 34);
+            listBoxClientes.TabIndex = 0;
+            // 
+            // buttonMostrarClientes
+            // 
+            buttonMostrarClientes.Location = new Point(230, 323);
+            buttonMostrarClientes.Name = "buttonMostrarClientes";
+            buttonMostrarClientes.Size = new Size(137, 39);
+            buttonMostrarClientes.TabIndex = 1;
+            buttonMostrarClientes.Text = "Mostrar Clientes";
+            buttonMostrarClientes.UseVisualStyleBackColor = true;
+            // 
+            // labelNome
+            // 
+            labelNome.AutoSize = true;
+            labelNome.Location = new Point(25, 47);
+            labelNome.Name = "labelNome";
+            labelNome.Size = new Size(100, 15);
+            labelNome.TabIndex = 2;
+            labelNome.Text = "Nome do Usuario";
+            // 
+            // textBoxNome
+            // 
+            textBoxNome.Location = new Point(145, 47);
+            textBoxNome.Name = "textBoxNome";
+            textBoxNome.Size = new Size(135, 23);
+            textBoxNome.TabIndex = 3;
+            // 
+            // maskedTextBoxDataNasc
+            // 
+            maskedTextBoxDataNasc.Location = new Point(145, 88);
+            maskedTextBoxDataNasc.Mask = "00/00/0000";
+            maskedTextBoxDataNasc.Name = "maskedTextBoxDataNasc";
+            maskedTextBoxDataNasc.Size = new Size(135, 23);
+            maskedTextBoxDataNasc.TabIndex = 4;
+            maskedTextBoxDataNasc.ValidatingType = typeof(DateTime);
+            // 
+            // labelDataNasc
+            // 
+            labelDataNasc.AutoSize = true;
+            labelDataNasc.Location = new Point(25, 88);
+            labelDataNasc.Name = "labelDataNasc";
+            labelDataNasc.Size = new Size(114, 15);
+            labelDataNasc.TabIndex = 5;
+            labelDataNasc.Text = "Data de Nascimento";
+            // 
+            // labelTelefone
+            // 
+            labelTelefone.AutoSize = true;
+            labelTelefone.Location = new Point(49, 126);
+            labelTelefone.Name = "labelTelefone";
+            labelTelefone.Size = new Size(51, 15);
+            labelTelefone.TabIndex = 6;
+            labelTelefone.Text = "Telefone";
+            // 
+            // maskedTextBoxTelefone
+            // 
+            maskedTextBoxTelefone.Location = new Point(145, 123);
+            maskedTextBoxTelefone.Mask = "(00) 00000-0000";
+            maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
+            maskedTextBoxTelefone.Size = new Size(135, 23);
+            maskedTextBoxTelefone.TabIndex = 7;
+            // 
+            // labelEmail
+            // 
+            labelEmail.AutoSize = true;
+            labelEmail.Location = new Point(49, 165);
+            labelEmail.Name = "labelEmail";
+            labelEmail.Size = new Size(36, 15);
+            labelEmail.TabIndex = 8;
+            labelEmail.Text = "Email";
+            // 
+            // textBoxEmail
+            // 
+            textBoxEmail.Location = new Point(145, 162);
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.Size = new Size(135, 23);
+            textBoxEmail.TabIndex = 9;
+            // 
+            // comboBoxGenero
+            // 
+            comboBoxGenero.FormattingEnabled = true;
+            comboBoxGenero.Location = new Point(366, 85);
+            comboBoxGenero.Name = "comboBoxGenero";
+            comboBoxGenero.Size = new Size(164, 23);
+            comboBoxGenero.TabIndex = 10;
+            // 
+            // labelGenero
+            // 
+            labelGenero.AutoSize = true;
+            labelGenero.Location = new Point(301, 91);
+            labelGenero.Name = "labelGenero";
+            labelGenero.Size = new Size(45, 15);
+            labelGenero.TabIndex = 11;
+            labelGenero.Text = "Gênero";
+            // 
+            // comboBoxEtnia
+            // 
+            comboBoxEtnia.FormattingEnabled = true;
+            comboBoxEtnia.Location = new Point(366, 118);
+            comboBoxEtnia.Name = "comboBoxEtnia";
+            comboBoxEtnia.Size = new Size(164, 23);
+            comboBoxEtnia.TabIndex = 12;
+            // 
+            // labelEtnia
+            // 
+            labelEtnia.AutoSize = true;
+            labelEtnia.Location = new Point(301, 123);
+            labelEtnia.Name = "labelEtnia";
+            labelEtnia.Size = new Size(33, 15);
+            labelEtnia.TabIndex = 13;
+            labelEtnia.Text = "Etnia";
+            // 
+            // checkBoxEstrangeiro
+            // 
+            checkBoxEstrangeiro.AutoSize = true;
+            checkBoxEstrangeiro.Location = new Point(384, 162);
+            checkBoxEstrangeiro.Name = "checkBoxEstrangeiro";
+            checkBoxEstrangeiro.Size = new Size(46, 19);
+            checkBoxEstrangeiro.TabIndex = 14;
+            checkBoxEstrangeiro.Text = "Sim";
+            checkBoxEstrangeiro.UseVisualStyleBackColor = true;
+            // 
+            // labelEstrangeiro
+            // 
+            labelEstrangeiro.AutoSize = true;
+            labelEstrangeiro.Location = new Point(301, 162);
+            labelEstrangeiro.Name = "labelEstrangeiro";
+            labelEstrangeiro.Size = new Size(66, 15);
+            labelEstrangeiro.TabIndex = 15;
+            labelEstrangeiro.Text = "Estrangeiro";
+            // 
+            // radioButtonPJ
+            // 
+            radioButtonPJ.AutoSize = true;
+            radioButtonPJ.Location = new Point(301, 196);
+            radioButtonPJ.Name = "radioButtonPJ";
+            radioButtonPJ.Size = new Size(93, 19);
+            radioButtonPJ.TabIndex = 16;
+            radioButtonPJ.TabStop = true;
+            radioButtonPJ.Text = "Pessoa Física";
+            radioButtonPJ.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPF
+            // 
+            radioButtonPF.AutoSize = true;
+            radioButtonPF.Location = new Point(416, 196);
+            radioButtonPF.Name = "radioButtonPF";
+            radioButtonPF.Size = new Size(104, 19);
+            radioButtonPF.TabIndex = 17;
+            radioButtonPF.TabStop = true;
+            radioButtonPF.Text = "Pessoa Jurídica";
+            radioButtonPF.UseVisualStyleBackColor = true;
+            // 
+            // buttonAdicionarClientes
+            // 
+            buttonAdicionarClientes.Location = new Point(217, 255);
+            buttonAdicionarClientes.Name = "buttonAdicionarClientes";
+            buttonAdicionarClientes.Size = new Size(177, 52);
+            buttonAdicionarClientes.TabIndex = 18;
+            buttonAdicionarClientes.Text = "Adicionar Clientes";
+            buttonAdicionarClientes.UseVisualStyleBackColor = true;
+            buttonAdicionarClientes.Click += buttonAdicionarClientes_Click;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(758, 41);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(227, 23);
+            textBox3.TabIndex = 19;
+            // 
+            // labelLogradouro
+            // 
+            labelLogradouro.AutoSize = true;
+            labelLogradouro.Location = new Point(673, 47);
+            labelLogradouro.Name = "labelLogradouro";
+            labelLogradouro.Size = new Size(69, 15);
+            labelLogradouro.TabIndex = 20;
+            labelLogradouro.Text = "Logradouro";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(758, 80);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(112, 23);
+            textBox4.TabIndex = 21;
+            // 
+            // labelNumero
+            // 
+            labelNumero.AutoSize = true;
+            labelNumero.Location = new Point(710, 88);
+            labelNumero.Name = "labelNumero";
+            labelNumero.Size = new Size(21, 15);
+            labelNumero.TabIndex = 22;
+            labelNumero.Text = "Nº";
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(758, 123);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(119, 23);
+            textBox5.TabIndex = 23;
+            // 
+            // labelComplemento
+            // 
+            labelComplemento.AutoSize = true;
+            labelComplemento.Location = new Point(658, 129);
+            labelComplemento.Name = "labelComplemento";
+            labelComplemento.Size = new Size(84, 15);
+            labelComplemento.TabIndex = 24;
+            labelComplemento.Text = "Complemento";
+            // 
+            // textBoxBairro
+            // 
+            textBoxBairro.Location = new Point(758, 166);
+            textBoxBairro.Name = "textBoxBairro";
+            textBoxBairro.Size = new Size(119, 23);
+            textBoxBairro.TabIndex = 25;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(693, 174);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 26;
+            label1.Text = "Bairro";
+            // 
+            // labelMunicipio
+            // 
+            labelMunicipio.AutoSize = true;
+            labelMunicipio.Location = new Point(673, 222);
+            labelMunicipio.Name = "labelMunicipio";
+            labelMunicipio.Size = new Size(61, 15);
+            labelMunicipio.TabIndex = 27;
+            labelMunicipio.Text = "Municipio";
+            // 
+            // textBoxMunicipio
+            // 
+            textBoxMunicipio.Location = new Point(758, 214);
+            textBoxMunicipio.Name = "textBoxMunicipio";
+            textBoxMunicipio.Size = new Size(156, 23);
+            textBoxMunicipio.TabIndex = 28;
+            // 
+            // labelEstado
+            // 
+            labelEstado.AutoSize = true;
+            labelEstado.Location = new Point(676, 267);
+            labelEstado.Name = "labelEstado";
+            labelEstado.Size = new Size(42, 15);
+            labelEstado.TabIndex = 29;
+            labelEstado.Text = "Estado";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(757, 259);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(157, 23);
+            comboBox1.TabIndex = 30;
+            // 
+            // maskedTextBox3
+            // 
+            maskedTextBox3.Location = new Point(762, 304);
+            maskedTextBox3.Mask = "00000";
+            maskedTextBox3.Name = "maskedTextBox3";
+            maskedTextBox3.Size = new Size(153, 23);
+            maskedTextBox3.TabIndex = 31;
+            maskedTextBox3.ValidatingType = typeof(int);
+            // 
+            // labelCep
+            // 
+            labelCep.AutoSize = true;
+            labelCep.Location = new Point(690, 312);
+            labelCep.Name = "labelCep";
+            labelCep.Size = new Size(28, 15);
+            labelCep.TabIndex = 32;
+            labelCep.Text = "Cep";
+            // 
+            // textBoxNomeSocial
+            // 
+            textBoxNomeSocial.Location = new Point(366, 47);
+            textBoxNomeSocial.Name = "textBoxNomeSocial";
+            textBoxNomeSocial.Size = new Size(164, 23);
+            textBoxNomeSocial.TabIndex = 33;
+            // 
+            // labelNomeSocial
+            // 
+            labelNomeSocial.AutoSize = true;
+            labelNomeSocial.Location = new Point(286, 50);
+            labelNomeSocial.Name = "labelNomeSocial";
+            labelNomeSocial.Size = new Size(74, 15);
+            labelNomeSocial.TabIndex = 34;
+            labelNomeSocial.Text = "Nome Social";
+            // 
+            // FormUsuario
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkGray;
+            ClientSize = new Size(1141, 450);
+            Controls.Add(labelNomeSocial);
+            Controls.Add(textBoxNomeSocial);
+            Controls.Add(labelCep);
+            Controls.Add(maskedTextBox3);
+            Controls.Add(comboBox1);
+            Controls.Add(labelEstado);
+            Controls.Add(textBoxMunicipio);
+            Controls.Add(labelMunicipio);
+            Controls.Add(label1);
+            Controls.Add(textBoxBairro);
+            Controls.Add(labelComplemento);
+            Controls.Add(textBox5);
+            Controls.Add(labelNumero);
+            Controls.Add(textBox4);
+            Controls.Add(labelLogradouro);
+            Controls.Add(textBox3);
+            Controls.Add(buttonAdicionarClientes);
+            Controls.Add(radioButtonPF);
+            Controls.Add(radioButtonPJ);
+            Controls.Add(labelEstrangeiro);
+            Controls.Add(checkBoxEstrangeiro);
+            Controls.Add(labelEtnia);
+            Controls.Add(comboBoxEtnia);
+            Controls.Add(labelGenero);
+            Controls.Add(comboBoxGenero);
+            Controls.Add(textBoxEmail);
+            Controls.Add(labelEmail);
+            Controls.Add(maskedTextBoxTelefone);
+            Controls.Add(labelTelefone);
+            Controls.Add(labelDataNasc);
+            Controls.Add(maskedTextBoxDataNasc);
+            Controls.Add(textBoxNome);
+            Controls.Add(labelNome);
+            Controls.Add(buttonMostrarClientes);
+            Controls.Add(listBoxClientes);
+            Name = "FormUsuario";
+            Text = "Email";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private ListBox listBoxClientes;
+        private Button buttonMostrarClientes;
+        private Label labelNome;
+        private TextBox textBoxNome;
+        private MaskedTextBox maskedTextBoxDataNasc;
+        private Label labelDataNasc;
+        private Label labelTelefone;
+        private MaskedTextBox maskedTextBoxTelefone;
+        private Label labelEmail;
+        private TextBox textBoxEmail;
+        private ComboBox comboBoxGenero;
+        private Label labelGenero;
+        private ComboBox comboBoxEtnia;
+        private Label labelEtnia;
+        private CheckBox checkBoxEstrangeiro;
+        private Label labelEstrangeiro;
+        private RadioButton radioButtonPJ;
+        private RadioButton radioButtonPF;
+        private Button buttonAdicionarClientes;
+        private TextBox textBox3;
+        private Label labelLogradouro;
+        private TextBox textBox4;
+        private Label labelNumero;
+        private TextBox textBox5;
+        private Label labelComplemento;
+        private TextBox textBoxBairro;
+        private Label label1;
+        private Label labelMunicipio;
+        private TextBox textBoxMunicipio;
+        private Label labelEstado;
+        private ComboBox comboBox1;
+        private MaskedTextBox maskedTextBox3;
+        private Label labelCep;
+        private TextBox textBoxNomeSocial;
+        private Label labelNomeSocial;
     }
 }

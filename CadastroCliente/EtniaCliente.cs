@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace CadastroDeCliente
 {
-    internal class EtniaCliente
+ internal enum EtniaCliente
     {
+        BRANCO,
+        NEGRO,
+        INDIGENA,
+        PARDO,
+        OUTROS
     }
 }

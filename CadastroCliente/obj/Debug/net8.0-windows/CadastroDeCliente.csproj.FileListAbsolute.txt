@@ -1,0 +1,17 @@
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\bin\Debug\net8.0-windows\CadastroDeCliente.exe
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\bin\Debug\net8.0-windows\CadastroDeCliente.deps.json
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\bin\Debug\net8.0-windows\CadastroDeCliente.runtimeconfig.json
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\bin\Debug\net8.0-windows\CadastroDeCliente.dll
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\bin\Debug\net8.0-windows\CadastroDeCliente.pdb
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\obj\Debug\net8.0-windows\CadastroDeCliente.csproj.GenerateResource.cache
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\obj\Debug\net8.0-windows\CadastroDeCliente.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\obj\Debug\net8.0-windows\CadastroDeCliente.AssemblyInfoInputs.cache
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\obj\Debug\net8.0-windows\CadastroDeCliente.AssemblyInfo.cs
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\obj\Debug\net8.0-windows\CadastroDeCliente.csproj.CoreCompileInputs.cache
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\obj\Debug\net8.0-windows\CadastroDeCliente.sourcelink.json
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\obj\Debug\net8.0-windows\CadastroDeCliente.dll
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\obj\Debug\net8.0-windows\refint\CadastroDeCliente.dll
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\obj\Debug\net8.0-windows\CadastroDeCliente.pdb
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\obj\Debug\net8.0-windows\CadastroDeCliente.genruntimeconfig.cache
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\obj\Debug\net8.0-windows\ref\CadastroDeCliente.dll
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\CadastroCliente\obj\Debug\net8.0-windows\CadastroCliente.FormUsuario.resources
