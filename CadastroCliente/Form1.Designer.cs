@@ -47,41 +47,43 @@
             radioButtonPJ = new RadioButton();
             radioButtonPF = new RadioButton();
             buttonAdicionarClientes = new Button();
-            textBox3 = new TextBox();
+            textBoxLogradouro = new TextBox();
             labelLogradouro = new Label();
-            textBox4 = new TextBox();
+            textBoxNumero = new TextBox();
             labelNumero = new Label();
-            textBox5 = new TextBox();
+            textBoxComplemento = new TextBox();
             labelComplemento = new Label();
             textBoxBairro = new TextBox();
             label1 = new Label();
             labelMunicipio = new Label();
             textBoxMunicipio = new TextBox();
             labelEstado = new Label();
-            comboBox1 = new ComboBox();
-            maskedTextBox3 = new MaskedTextBox();
+            comboBoxEstado = new ComboBox();
+            maskedTextBoxCep = new MaskedTextBox();
             labelCep = new Label();
             textBoxNomeSocial = new TextBox();
             labelNomeSocial = new Label();
+            labelTitulo = new Label();
             SuspendLayout();
             // 
             // listBoxClientes
             // 
             listBoxClientes.FormattingEnabled = true;
             listBoxClientes.ItemHeight = 15;
-            listBoxClientes.Location = new Point(208, 389);
+            listBoxClientes.Location = new Point(724, 405);
             listBoxClientes.Name = "listBoxClientes";
             listBoxClientes.Size = new Size(206, 34);
             listBoxClientes.TabIndex = 0;
             // 
             // buttonMostrarClientes
             // 
-            buttonMostrarClientes.Location = new Point(230, 323);
+            buttonMostrarClientes.Location = new Point(757, 360);
             buttonMostrarClientes.Name = "buttonMostrarClientes";
             buttonMostrarClientes.Size = new Size(137, 39);
             buttonMostrarClientes.TabIndex = 1;
             buttonMostrarClientes.Text = "Mostrar Clientes";
             buttonMostrarClientes.UseVisualStyleBackColor = true;
+            buttonMostrarClientes.Click += buttonMostrarClientes_Click;
             // 
             // labelNome
             // 
@@ -227,20 +229,20 @@
             // 
             // buttonAdicionarClientes
             // 
-            buttonAdicionarClientes.Location = new Point(217, 255);
+            buttonAdicionarClientes.Location = new Point(217, 243);
             buttonAdicionarClientes.Name = "buttonAdicionarClientes";
             buttonAdicionarClientes.Size = new Size(177, 52);
             buttonAdicionarClientes.TabIndex = 18;
-            buttonAdicionarClientes.Text = "Adicionar Clientes";
+            buttonAdicionarClientes.Text = "Cadastrar";
             buttonAdicionarClientes.UseVisualStyleBackColor = true;
             buttonAdicionarClientes.Click += buttonAdicionarClientes_Click;
             // 
-            // textBox3
+            // textBoxLogradouro
             // 
-            textBox3.Location = new Point(758, 41);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(227, 23);
-            textBox3.TabIndex = 19;
+            textBoxLogradouro.Location = new Point(758, 41);
+            textBoxLogradouro.Name = "textBoxLogradouro";
+            textBoxLogradouro.Size = new Size(227, 23);
+            textBoxLogradouro.TabIndex = 19;
             // 
             // labelLogradouro
             // 
@@ -251,12 +253,12 @@
             labelLogradouro.TabIndex = 20;
             labelLogradouro.Text = "Logradouro";
             // 
-            // textBox4
+            // textBoxNumero
             // 
-            textBox4.Location = new Point(758, 80);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(112, 23);
-            textBox4.TabIndex = 21;
+            textBoxNumero.Location = new Point(758, 80);
+            textBoxNumero.Name = "textBoxNumero";
+            textBoxNumero.Size = new Size(112, 23);
+            textBoxNumero.TabIndex = 21;
             // 
             // labelNumero
             // 
@@ -267,12 +269,12 @@
             labelNumero.TabIndex = 22;
             labelNumero.Text = "Nº";
             // 
-            // textBox5
+            // textBoxComplemento
             // 
-            textBox5.Location = new Point(758, 123);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(119, 23);
-            textBox5.TabIndex = 23;
+            textBoxComplemento.Location = new Point(758, 123);
+            textBoxComplemento.Name = "textBoxComplemento";
+            textBoxComplemento.Size = new Size(119, 23);
+            textBoxComplemento.TabIndex = 23;
             // 
             // labelComplemento
             // 
@@ -324,22 +326,22 @@
             labelEstado.TabIndex = 29;
             labelEstado.Text = "Estado";
             // 
-            // comboBox1
+            // comboBoxEstado
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(757, 259);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(157, 23);
-            comboBox1.TabIndex = 30;
+            comboBoxEstado.FormattingEnabled = true;
+            comboBoxEstado.Items.AddRange(new object[] { "SP,", "MG,", "BA" });
+            comboBoxEstado.Location = new Point(757, 259);
+            comboBoxEstado.Name = "comboBoxEstado";
+            comboBoxEstado.Size = new Size(157, 23);
+            comboBoxEstado.TabIndex = 30;
             // 
-            // maskedTextBox3
+            // maskedTextBoxCep
             // 
-            maskedTextBox3.Location = new Point(762, 304);
-            maskedTextBox3.Mask = "00000";
-            maskedTextBox3.Name = "maskedTextBox3";
-            maskedTextBox3.Size = new Size(153, 23);
-            maskedTextBox3.TabIndex = 31;
-            maskedTextBox3.ValidatingType = typeof(int);
+            maskedTextBoxCep.Location = new Point(762, 304);
+            maskedTextBoxCep.Mask = "00000-000";
+            maskedTextBoxCep.Name = "maskedTextBoxCep";
+            maskedTextBoxCep.Size = new Size(153, 23);
+            maskedTextBoxCep.TabIndex = 31;
             // 
             // labelCep
             // 
@@ -366,28 +368,39 @@
             labelNomeSocial.TabIndex = 34;
             labelNomeSocial.Text = "Nome Social";
             // 
+            // labelTitulo
+            // 
+            labelTitulo.AutoSize = true;
+            labelTitulo.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelTitulo.Location = new Point(252, 9);
+            labelTitulo.Name = "labelTitulo";
+            labelTitulo.Size = new Size(103, 24);
+            labelTitulo.TabIndex = 35;
+            labelTitulo.Text = "Cadastro";
+            // 
             // FormUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkGray;
+            BackColor = Color.RosyBrown;
             ClientSize = new Size(1141, 450);
+            Controls.Add(labelTitulo);
             Controls.Add(labelNomeSocial);
             Controls.Add(textBoxNomeSocial);
             Controls.Add(labelCep);
-            Controls.Add(maskedTextBox3);
-            Controls.Add(comboBox1);
+            Controls.Add(maskedTextBoxCep);
+            Controls.Add(comboBoxEstado);
             Controls.Add(labelEstado);
             Controls.Add(textBoxMunicipio);
             Controls.Add(labelMunicipio);
             Controls.Add(label1);
             Controls.Add(textBoxBairro);
             Controls.Add(labelComplemento);
-            Controls.Add(textBox5);
+            Controls.Add(textBoxComplemento);
             Controls.Add(labelNumero);
-            Controls.Add(textBox4);
+            Controls.Add(textBoxNumero);
             Controls.Add(labelLogradouro);
-            Controls.Add(textBox3);
+            Controls.Add(textBoxLogradouro);
             Controls.Add(buttonAdicionarClientes);
             Controls.Add(radioButtonPF);
             Controls.Add(radioButtonPJ);
@@ -434,21 +447,22 @@
         private RadioButton radioButtonPJ;
         private RadioButton radioButtonPF;
         private Button buttonAdicionarClientes;
-        private TextBox textBox3;
+        private TextBox textBoxLogradouro;
         private Label labelLogradouro;
-        private TextBox textBox4;
+        private TextBox textBoxNumero;
         private Label labelNumero;
-        private TextBox textBox5;
+        private TextBox textBoxComplemento;
         private Label labelComplemento;
         private TextBox textBoxBairro;
         private Label label1;
         private Label labelMunicipio;
         private TextBox textBoxMunicipio;
         private Label labelEstado;
-        private ComboBox comboBox1;
-        private MaskedTextBox maskedTextBox3;
+        private ComboBox comboBoxEstado;
+        private MaskedTextBox maskedTextBoxCep;
         private Label labelCep;
         private TextBox textBoxNomeSocial;
         private Label labelNomeSocial;
+        private Label labelTitulo;
     }
 }

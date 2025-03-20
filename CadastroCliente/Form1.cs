@@ -1,10 +1,13 @@
 using CadastroDeCliente;
+using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace CadastroCliente
 {
     public partial class FormUsuario : Form
     {
-        private readonly List<Cliente> Clientes = [];
+        
+        private readonly List<Cliente> Clientes = new List<Cliente>();  
 
         public FormUsuario()
         {
@@ -21,12 +24,11 @@ namespace CadastroCliente
             Cliente lara = new Cliente() { Id = 3, Nome = "Lara Lamark", DataNascimento = "07/12/2020", Etnia = EtniaCliente.BRANCO, Tipo = TipoCliente.PJ, EnderecoCliente = enderecolara, Genero = GeneroCliente.FEMININO };
             Clientes.Add(lara);
 
-            // Adicionar valores ao ComboBox de Gênero
+            // Populando os combo boxes
             comboBoxGenero.Items.Add("Masculino");
             comboBoxGenero.Items.Add("Feminino");
             comboBoxGenero.Items.Add("Outro");
 
-            // Adicionar valores ao ComboBox de Etnia
             comboBoxEtnia.Items.Add("Branco");
             comboBoxEtnia.Items.Add("Negro");
             comboBoxEtnia.Items.Add("Asiático");
@@ -40,14 +42,12 @@ namespace CadastroCliente
                 string.IsNullOrWhiteSpace(maskedTextBoxDataNasc.Text) ||
                 string.IsNullOrWhiteSpace(maskedTextBoxTelefone.Text) ||
                 string.IsNullOrWhiteSpace(textBoxEmail.Text) ||
-                string.IsNullOrWhiteSpace(textBoxNomeSocial.Text) ||
                 comboBoxGenero.SelectedIndex == -1 ||
                 comboBoxEtnia.SelectedIndex == -1 ||
                 !(radioButtonPF.Checked || radioButtonPJ.Checked))
             {
                 MessageBox.Show("Por favor, preencha todos os campos.");
                 return;
-
             }
             foreach (var c in Clientes)
             {
@@ -62,18 +62,69 @@ namespace CadastroCliente
                 MessageBox.Show("O email inserido é inválido. Por favor, insira um email válido.");
                 return;
             }
+            string email = textBoxEmail.Text;
+            var emailRegex = new Regex(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
+            if (!emailRegex.IsMatch(email))
+            {
+                MessageBox.Show("O e-mail inserido é inválido. Por favor, insira um e-mail válido.");
+                return;
+            }
+
             if (!maskedTextBoxTelefone.MaskFull)
             {
                 MessageBox.Show("O telefone inserido é inválido. Por favor, insira um telefone válido.");
                 return;
             }
 
-            GeneroCliente generoSelecionado = (GeneroCliente) comboBoxGenero.SelectedIndex;
+            if (string.IsNullOrWhiteSpace(textBoxNome.Text) || !textBoxNome.Text.All(char.IsLetter))
+            {
+                MessageBox.Show("O nome inserido é inválido. Por favor, insira um nome válido.");
+                return;
+            }
+            string dataNascimento = maskedTextBoxDataNasc.Text;
+
+            if (dataNascimento.Any(ch => !char.IsDigit(ch) && ch != '/'))
+            {
+                MessageBox.Show("A data de nascimento não pode conter letras. Por favor, insira uma data válida.");
+                return;
+            }
+            
+            if (!(radioButtonPF.Checked || radioButtonPJ.Checked))
+            {
+                MessageBox.Show("Por favor, selecione o tipo de cliente (Pessoa Física ou Pessoa Jurídica).");
+                return;
+            }
+          
+            if (string.IsNullOrWhiteSpace(textBoxBairro.Text) ||
+                string.IsNullOrWhiteSpace(maskedTextBoxCep.Text) ||
+                string.IsNullOrWhiteSpace(textBoxComplemento.Text) ||
+                string.IsNullOrWhiteSpace(textBoxLogradouro.Text) ||
+                string.IsNullOrWhiteSpace(textBoxMunicipio.Text) ||
+                string.IsNullOrWhiteSpace(textBoxNumero.Text))
+            {
+                MessageBox.Show("Por favor, preencha todos os campos do endereço.");
+                return;
+            }
+
+           
+            if (!maskedTextBoxCep.MaskFull)
+            {
+                MessageBox.Show("O CEP inserido é inválido. Por favor, insira um CEP válido.");
+                return;
+            }
+
+            if (comboBoxEstado.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, selecione o estado.");
+                return;
+            }
+
+
+
+            GeneroCliente generoSelecionado = (GeneroCliente)comboBoxGenero.SelectedIndex;
             EtniaCliente etniaSelecionada = (EtniaCliente)comboBoxEtnia.SelectedIndex;
 
-
-
-
+           
             Cliente cliente = new Cliente()
             {
                 Id = Clientes.Count + 1,
@@ -81,11 +132,14 @@ namespace CadastroCliente
                 Email = textBoxEmail.Text,
                 DataNascimento = maskedTextBoxDataNasc.Text,
                 NomeSocial = textBoxNomeSocial.Text,
-                Genero = (GeneroCliente)Enum.Parse(typeof(GeneroCliente), comboBoxGenero.SelectedItem.ToString()), // Convertendo para o enum GeneroCliente
-                Etnia = (EtniaCliente)Enum.Parse(typeof(EtniaCliente), comboBoxEtnia.SelectedItem.ToString()), // Convertendo para o enum EtniaCliente
+                Genero = generoSelecionado,
+                Etnia = etniaSelecionada,
                 Estrangeiro = checkBoxEstrangeiro.Checked,
                 Tipo = radioButtonPF.Checked ? TipoCliente.PF : TipoCliente.PJ
+
+
             };
+
 
             Clientes.Add(cliente);
 
@@ -93,11 +147,26 @@ namespace CadastroCliente
             LimparCampos();
 
 
+            ExibirClientes();
+
+
             MessageBox.Show("Cliente cadastrado com sucesso!");
+        }
+
+        private void ExibirClientes()
+        {
+
+            listBoxClientes.Items.Clear();
+            foreach (var cliente in Clientes)
+            {
+               
+                listBoxClientes.Items.Add($"{cliente.Nome} - {cliente.Email}");
+            }
         }
 
         private void LimparCampos()
         {
+           
             textBoxNome.Clear();
             maskedTextBoxDataNasc.Clear();
             maskedTextBoxTelefone.Clear();
@@ -108,6 +177,11 @@ namespace CadastroCliente
             checkBoxEstrangeiro.Checked = false;
             radioButtonPF.Checked = false;
             radioButtonPJ.Checked = false;
+        }
+
+        private void buttonMostrarClientes_Click(object sender, EventArgs e)
+        {
+            ExibirClientes();
         }
     }
 }
