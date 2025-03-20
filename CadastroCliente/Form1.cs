@@ -1,13 +1,12 @@
 using CadastroDeCliente;
-using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace CadastroCliente
 {
     public partial class FormUsuario : Form
     {
-        
-        private readonly List<Cliente> Clientes = new List<Cliente>();  
+
+        private readonly List<Cliente> Clientes = new List<Cliente>();
 
         public FormUsuario()
         {
@@ -34,7 +33,18 @@ namespace CadastroCliente
             comboBoxEtnia.Items.Add("Asiático");
             comboBoxEtnia.Items.Add("Indígena");
             comboBoxEtnia.Items.Add("Outros");
+
+            textBoxNome.Text = "Digite seu nome";
+            textBoxNome.ForeColor = Color.Gray;
+
+            // Associar os eventos Enter e Leave
+            textBoxNome.Enter += textBoxNome_Enter;
+            textBoxNome.Leave += textBoxNome_Leave;
         }
+
+
+
+
 
         private void buttonAdicionarClientes_Click(object sender, EventArgs e)
         {
@@ -57,11 +67,7 @@ namespace CadastroCliente
                     return;
                 }
             }
-            if (!textBoxEmail.Text.Contains("@"))
-            {
-                MessageBox.Show("O email inserido é inválido. Por favor, insira um email válido.");
-                return;
-            }
+          
             string email = textBoxEmail.Text;
             var emailRegex = new Regex(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
             if (!emailRegex.IsMatch(email))
@@ -88,13 +94,13 @@ namespace CadastroCliente
                 MessageBox.Show("A data de nascimento não pode conter letras. Por favor, insira uma data válida.");
                 return;
             }
-            
+
             if (!(radioButtonPF.Checked || radioButtonPJ.Checked))
             {
                 MessageBox.Show("Por favor, selecione o tipo de cliente (Pessoa Física ou Pessoa Jurídica).");
                 return;
             }
-          
+
             if (string.IsNullOrWhiteSpace(textBoxBairro.Text) ||
                 string.IsNullOrWhiteSpace(maskedTextBoxCep.Text) ||
                 string.IsNullOrWhiteSpace(textBoxComplemento.Text) ||
@@ -106,7 +112,7 @@ namespace CadastroCliente
                 return;
             }
 
-           
+
             if (!maskedTextBoxCep.MaskFull)
             {
                 MessageBox.Show("O CEP inserido é inválido. Por favor, insira um CEP válido.");
@@ -124,7 +130,7 @@ namespace CadastroCliente
             GeneroCliente generoSelecionado = (GeneroCliente)comboBoxGenero.SelectedIndex;
             EtniaCliente etniaSelecionada = (EtniaCliente)comboBoxEtnia.SelectedIndex;
 
-           
+
             Cliente cliente = new Cliente()
             {
                 Id = Clientes.Count + 1,
@@ -153,20 +159,39 @@ namespace CadastroCliente
             MessageBox.Show("Cliente cadastrado com sucesso!");
         }
 
+        private void textBoxNome_Enter(object sender, EventArgs e)
+        {
+            if (textBoxNome.Text == "Digite seu nome")
+            {
+                textBoxNome.Text = "";
+                textBoxNome.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxNome_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBoxNome.Text))
+            {
+                textBoxNome.Text = "Digite seu nome";
+                textBoxNome.ForeColor = Color.Gray;
+            }
+        }
+
+
         private void ExibirClientes()
         {
 
             listBoxClientes.Items.Clear();
             foreach (var cliente in Clientes)
             {
-               
+
                 listBoxClientes.Items.Add($"{cliente.Nome} - {cliente.Email}");
             }
         }
 
         private void LimparCampos()
         {
-           
+
             textBoxNome.Clear();
             maskedTextBoxDataNasc.Clear();
             maskedTextBoxTelefone.Clear();

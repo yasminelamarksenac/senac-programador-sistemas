@@ -338,7 +338,7 @@
             // maskedTextBoxCep
             // 
             maskedTextBoxCep.Location = new Point(762, 304);
-            maskedTextBoxCep.Mask = "00000-000";
+            maskedTextBoxCep.Mask = " ";
             maskedTextBoxCep.Name = "maskedTextBoxCep";
             maskedTextBoxCep.Size = new Size(153, 23);
             maskedTextBoxCep.TabIndex = 31;
