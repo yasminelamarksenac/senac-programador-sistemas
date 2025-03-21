@@ -7,10 +7,16 @@ namespace CadastroCliente
     {
 
         private readonly List<Cliente> Clientes = new List<Cliente>();
+        private readonly BindingSource BindingSource = [];
 
         public FormUsuario()
         {
             InitializeComponent();
+
+          
+
+
+
             EnderecoCliente enderecoyasmine = new EnderecoCliente() { Bairro = "Av Paulista", Cep = "09876-040", Complemento = "Casa", Estado = "SP", Logradouro = "Rua do Feitiço", Municipio = "São Paulo", Numero = "77" };
             Cliente yasmine = new Cliente() { Id = 1, Nome = "Yasmine Lamark", DataNascimento = "31/08/1991", Etnia = EtniaCliente.PARDO, Tipo = TipoCliente.PJ, EnderecoCliente = enderecoyasmine, Genero = GeneroCliente.FEMININO };
             Clientes.Add(yasmine);
@@ -23,7 +29,10 @@ namespace CadastroCliente
             Cliente lara = new Cliente() { Id = 3, Nome = "Lara Lamark", DataNascimento = "07/12/2020", Etnia = EtniaCliente.BRANCO, Tipo = TipoCliente.PJ, EnderecoCliente = enderecolara, Genero = GeneroCliente.FEMININO };
             Clientes.Add(lara);
 
-            // Populando os combo boxes
+            BindingSource.DataSource = Clientes;
+            dataGridView1.DataSource = BindingSource;
+
+            
             comboBoxGenero.Items.Add("Masculino");
             comboBoxGenero.Items.Add("Feminino");
             comboBoxGenero.Items.Add("Outro");
@@ -33,18 +42,7 @@ namespace CadastroCliente
             comboBoxEtnia.Items.Add("Asiático");
             comboBoxEtnia.Items.Add("Indígena");
             comboBoxEtnia.Items.Add("Outros");
-
-            textBoxNome.Text = "Digite seu nome";
-            textBoxNome.ForeColor = Color.Gray;
-
-            // Associar os eventos Enter e Leave
-            textBoxNome.Enter += textBoxNome_Enter;
-            textBoxNome.Leave += textBoxNome_Leave;
         }
-
-
-
-
 
         private void buttonAdicionarClientes_Click(object sender, EventArgs e)
         {
@@ -159,34 +157,12 @@ namespace CadastroCliente
             MessageBox.Show("Cliente cadastrado com sucesso!");
         }
 
-        private void textBoxNome_Enter(object sender, EventArgs e)
-        {
-            if (textBoxNome.Text == "Digite seu nome")
-            {
-                textBoxNome.Text = "";
-                textBoxNome.ForeColor = Color.Black;
-            }
-        }
-
-        private void textBoxNome_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(textBoxNome.Text))
-            {
-                textBoxNome.Text = "Digite seu nome";
-                textBoxNome.ForeColor = Color.Gray;
-            }
-        }
-
-
         private void ExibirClientes()
         {
+            
+            BindingSource.DataSource = Clientes;
+            dataGridView1.DataSource = BindingSource;
 
-            listBoxClientes.Items.Clear();
-            foreach (var cliente in Clientes)
-            {
-
-                listBoxClientes.Items.Add($"{cliente.Nome} - {cliente.Email}");
-            }
         }
 
         private void LimparCampos()
@@ -207,6 +183,7 @@ namespace CadastroCliente
         private void buttonMostrarClientes_Click(object sender, EventArgs e)
         {
             ExibirClientes();
+            BindingSource.ResetBindings(false);
         }
     }
 }

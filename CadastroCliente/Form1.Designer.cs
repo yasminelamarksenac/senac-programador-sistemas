@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBoxClientes = new ListBox();
-            buttonMostrarClientes = new Button();
             labelNome = new Label();
             textBoxNome = new TextBox();
             maskedTextBoxDataNasc = new MaskedTextBox();
@@ -64,26 +62,10 @@
             textBoxNomeSocial = new TextBox();
             labelNomeSocial = new Label();
             labelTitulo = new Label();
+            dataGridView1 = new DataGridView();
+            buttonMostrarClientes = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // listBoxClientes
-            // 
-            listBoxClientes.FormattingEnabled = true;
-            listBoxClientes.ItemHeight = 15;
-            listBoxClientes.Location = new Point(724, 405);
-            listBoxClientes.Name = "listBoxClientes";
-            listBoxClientes.Size = new Size(206, 34);
-            listBoxClientes.TabIndex = 0;
-            // 
-            // buttonMostrarClientes
-            // 
-            buttonMostrarClientes.Location = new Point(757, 360);
-            buttonMostrarClientes.Name = "buttonMostrarClientes";
-            buttonMostrarClientes.Size = new Size(137, 39);
-            buttonMostrarClientes.TabIndex = 1;
-            buttonMostrarClientes.Text = "Mostrar Clientes";
-            buttonMostrarClientes.UseVisualStyleBackColor = true;
-            buttonMostrarClientes.Click += buttonMostrarClientes_Click;
             // 
             // labelNome
             // 
@@ -338,7 +320,7 @@
             // maskedTextBoxCep
             // 
             maskedTextBoxCep.Location = new Point(762, 304);
-            maskedTextBoxCep.Mask = " ";
+            maskedTextBoxCep.Mask = " 00000-000";
             maskedTextBoxCep.Name = "maskedTextBoxCep";
             maskedTextBoxCep.Size = new Size(153, 23);
             maskedTextBoxCep.TabIndex = 31;
@@ -378,12 +360,31 @@
             labelTitulo.TabIndex = 35;
             labelTitulo.Text = "Cadastro";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(49, 301);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(511, 136);
+            dataGridView1.TabIndex = 36;
+            // 
+            // buttonMostrarClientes
+            // 
+            buttonMostrarClientes.Location = new Point(592, 393);
+            buttonMostrarClientes.Name = "buttonMostrarClientes";
+            buttonMostrarClientes.Size = new Size(181, 47);
+            buttonMostrarClientes.TabIndex = 37;
+            buttonMostrarClientes.Text = "MostrarClientes";
+            buttonMostrarClientes.UseVisualStyleBackColor = true;
+            // 
             // FormUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.RosyBrown;
             ClientSize = new Size(1141, 450);
+            Controls.Add(buttonMostrarClientes);
+            Controls.Add(dataGridView1);
             Controls.Add(labelTitulo);
             Controls.Add(labelNomeSocial);
             Controls.Add(textBoxNomeSocial);
@@ -418,18 +419,14 @@
             Controls.Add(maskedTextBoxDataNasc);
             Controls.Add(textBoxNome);
             Controls.Add(labelNome);
-            Controls.Add(buttonMostrarClientes);
-            Controls.Add(listBoxClientes);
             Name = "FormUsuario";
             Text = "Email";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private ListBox listBoxClientes;
-        private Button buttonMostrarClientes;
         private Label labelNome;
         private TextBox textBoxNome;
         private MaskedTextBox maskedTextBoxDataNasc;
@@ -464,5 +461,7 @@
         private TextBox textBoxNomeSocial;
         private Label labelNomeSocial;
         private Label labelTitulo;
+        private DataGridView dataGridView1;
+        private Button buttonMostrarClientes;
     }
 }
