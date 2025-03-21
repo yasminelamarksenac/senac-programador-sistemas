@@ -146,7 +146,7 @@ namespace CadastroCliente
 
 
             Clientes.Add(cliente);
-
+            BindingSource.ResetBindings(false);
 
             LimparCampos();
 
@@ -160,8 +160,7 @@ namespace CadastroCliente
         private void ExibirClientes()
         {
             
-            BindingSource.DataSource = Clientes;
-            dataGridView1.DataSource = BindingSource;
+            
 
         }
 
