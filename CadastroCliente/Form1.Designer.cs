@@ -63,7 +63,6 @@
             labelNomeSocial = new Label();
             labelTitulo = new Label();
             dataGridView1 = new DataGridView();
-            buttonMostrarClientes = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -311,7 +310,7 @@
             // comboBoxEstado
             // 
             comboBoxEstado.FormattingEnabled = true;
-            comboBoxEstado.Items.AddRange(new object[] { "SP,", "MG,", "BA" });
+            comboBoxEstado.Items.AddRange(new object[] { "Acre\t(AC)", "Alagoas\t(AL)\t", "Amapá\t(AP)\t", "Amazonas\t (AM)\t", "Bahia\t(BA)", "Ceará\t (CE)\t", "Espírito Santo (ES)\t", "Goiás\t(GO)", "Maranhão\t (MA)\t", "Mato Grosso (MT)\t", "Mato Grosso do Sul\t(MS)\t", "Minas Gerais MG\t", "Pará\t(PA)\t", "Paraíba\t(PB)\t", "Paraná\t(PR)\t", "Pernambuco (PE)\t", "Piauí\t(PI)\t", "Rio de Janeiro (RJ)\t", "Rio Grande do Norte\t(RN)\t", "Rio Grande do Sul\t(RS)\t", "Rondônia\t(RO)\t", "Roraima\t(RR)\t", "Santa Catarina (SC)\t", "São Paulo\t(SP)\t", "Sergipe\t(SE)\t", "Tocantins\t(TO)\t" });
             comboBoxEstado.Location = new Point(757, 259);
             comboBoxEstado.Name = "comboBoxEstado";
             comboBoxEstado.Size = new Size(157, 23);
@@ -363,19 +362,10 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(49, 301);
+            dataGridView1.Location = new Point(25, 301);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(511, 136);
-            dataGridView1.TabIndex = 36;
-            // 
-            // buttonMostrarClientes
-            // 
-            buttonMostrarClientes.Location = new Point(592, 393);
-            buttonMostrarClientes.Name = "buttonMostrarClientes";
-            buttonMostrarClientes.Size = new Size(181, 47);
-            buttonMostrarClientes.TabIndex = 37;
-            buttonMostrarClientes.Text = "MostrarClientes";
-            buttonMostrarClientes.UseVisualStyleBackColor = true;
+            dataGridView1.Size = new Size(539, 139);
+            dataGridView1.TabIndex = 38;
             // 
             // FormUsuario
             // 
@@ -383,7 +373,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.RosyBrown;
             ClientSize = new Size(1141, 450);
-            Controls.Add(buttonMostrarClientes);
             Controls.Add(dataGridView1);
             Controls.Add(labelTitulo);
             Controls.Add(labelNomeSocial);
@@ -461,7 +450,7 @@
         private TextBox textBoxNomeSocial;
         private Label labelNomeSocial;
         private Label labelTitulo;
-        private DataGridView dataGridView1;
         private Button buttonMostrarClientes;
+        private DataGridView dataGridView1;
     }
 }
