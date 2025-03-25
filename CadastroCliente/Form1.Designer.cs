@@ -63,6 +63,7 @@
             labelNomeSocial = new Label();
             labelTitulo = new Label();
             dataGridView1 = new DataGridView();
+            labelEndereco = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -367,12 +368,23 @@
             dataGridView1.Size = new Size(539, 139);
             dataGridView1.TabIndex = 38;
             // 
+            // labelEndereco
+            // 
+            labelEndereco.AutoSize = true;
+            labelEndereco.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelEndereco.Location = new Point(751, 9);
+            labelEndereco.Name = "labelEndereco";
+            labelEndereco.Size = new Size(108, 24);
+            labelEndereco.TabIndex = 39;
+            labelEndereco.Text = "Endereço";
+            // 
             // FormUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.RosyBrown;
             ClientSize = new Size(1141, 450);
+            Controls.Add(labelEndereco);
             Controls.Add(dataGridView1);
             Controls.Add(labelTitulo);
             Controls.Add(labelNomeSocial);
@@ -452,5 +464,6 @@
         private Label labelTitulo;
         private Button buttonMostrarClientes;
         private DataGridView dataGridView1;
+        private Label labelEndereco;
     }
 }

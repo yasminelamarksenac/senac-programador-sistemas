@@ -1,0 +1,15 @@
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\bin\Debug\net8.0\Exercicios.exe
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\bin\Debug\net8.0\Exercicios.deps.json
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\bin\Debug\net8.0\Exercicios.runtimeconfig.json
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\bin\Debug\net8.0\Exercicios.dll
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\bin\Debug\net8.0\Exercicios.pdb
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\obj\Debug\net8.0\Exercicios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\obj\Debug\net8.0\Exercicios.AssemblyInfoInputs.cache
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\obj\Debug\net8.0\Exercicios.AssemblyInfo.cs
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\obj\Debug\net8.0\Exercicios.csproj.CoreCompileInputs.cache
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\obj\Debug\net8.0\Exercicios.sourcelink.json
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\obj\Debug\net8.0\Exercicios.dll
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\obj\Debug\net8.0\refint\Exercicios.dll
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\obj\Debug\net8.0\Exercicios.pdb
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\obj\Debug\net8.0\Exercicios.genruntimeconfig.cache
+C:\Users\yasmine.nlamark\Documents\senac-programador-sistemas\senac-programador-sistemas\Exercicios\obj\Debug\net8.0\ref\Exercicios.dll
