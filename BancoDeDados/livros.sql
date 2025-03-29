@@ -1,2 +1,4 @@
-SELECT * FROM livro WHERE data_publicacao LIKE '199%';
+SELECT *  FROM livro;
+ 
+
  
