@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CadastroDeCliente")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a9540964ec425620642bc131221109e2021a082")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86b82be38c21cb12083345bd564dbe67805cdfe8")]
 [assembly: System.Reflection.AssemblyProductAttribute("CadastroDeCliente")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CadastroDeCliente")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

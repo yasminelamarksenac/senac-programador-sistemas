@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CadastroDeCliente
+namespace CadastroDeCliente.Dominio
 {
-    enum TipoCliente
+    enum GeneroCliente
     {
-        PF,
-        PJ
+        MASCULINO,
+        FEMININO,
+        OUTRO
     }
 }

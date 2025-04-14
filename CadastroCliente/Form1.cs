@@ -1,4 +1,4 @@
-using CadastroDeCliente;
+using CadastroDeCliente.Dominio;
 using System.Text.RegularExpressions;
 
 namespace CadastroCliente

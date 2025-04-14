@@ -1,5 +1,5 @@
-﻿using CadastroCliente;
-using CadastroDeCliente.banco_de_dados;
+﻿using CadastroDeCliente.banco_de_dados;
+using CadastroDeCliente.Dominio;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
