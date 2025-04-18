@@ -1,8 +1,0 @@
-C:\Users\yasmine.nlamark\Documents\REPOSITORIO DA YASMINE\senac-programador-sistemas\ListaAtividade\obj\Debug\net8.0-windows\ListaAtividade.csproj.AssemblyReference.cache
-C:\Users\yasmine.nlamark\Documents\REPOSITORIO DA YASMINE\senac-programador-sistemas\ListaAtividade\obj\Debug\net8.0-windows\ListaAtividade.ListaDr.resources
-C:\Users\yasmine.nlamark\Documents\REPOSITORIO DA YASMINE\senac-programador-sistemas\ListaAtividade\obj\Debug\net8.0-windows\ListaAtividade.csproj.GenerateResource.cache
-C:\Users\yasmine.nlamark\Documents\REPOSITORIO DA YASMINE\senac-programador-sistemas\ListaAtividade\obj\Debug\net8.0-windows\ListaAtividade.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\yasmine.nlamark\Documents\REPOSITORIO DA YASMINE\senac-programador-sistemas\ListaAtividade\obj\Debug\net8.0-windows\ListaAtividade.AssemblyInfoInputs.cache
-C:\Users\yasmine.nlamark\Documents\REPOSITORIO DA YASMINE\senac-programador-sistemas\ListaAtividade\obj\Debug\net8.0-windows\ListaAtividade.AssemblyInfo.cs
-C:\Users\yasmine.nlamark\Documents\REPOSITORIO DA YASMINE\senac-programador-sistemas\ListaAtividade\obj\Debug\net8.0-windows\ListaAtividade.csproj.CoreCompileInputs.cache
-C:\Users\yasmine.nlamark\Documents\REPOSITORIO DA YASMINE\senac-programador-sistemas\ListaAtividade\obj\Debug\net8.0-windows\ListaAtividade.sourcelink.json
