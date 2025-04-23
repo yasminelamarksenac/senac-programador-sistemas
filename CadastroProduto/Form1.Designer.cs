@@ -35,6 +35,7 @@
             dataGridViewProduto = new DataGridView();
             label1 = new Label();
             comboBoxQuantidade = new ComboBox();
+            ButtonVisualizar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProduto).BeginInit();
             SuspendLayout();
             // 
@@ -100,11 +101,22 @@
             comboBoxQuantidade.Size = new Size(45, 23);
             comboBoxQuantidade.TabIndex = 6;
             // 
+            // ButtonVisualizar
+            // 
+            ButtonVisualizar.Location = new Point(606, 345);
+            ButtonVisualizar.Name = "ButtonVisualizar";
+            ButtonVisualizar.Size = new Size(153, 24);
+            ButtonVisualizar.TabIndex = 7;
+            ButtonVisualizar.Text = "Visualizar Produtos";
+            ButtonVisualizar.UseVisualStyleBackColor = true;
+            ButtonVisualizar.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(ButtonVisualizar);
             Controls.Add(comboBoxQuantidade);
             Controls.Add(label1);
             Controls.Add(dataGridViewProduto);
@@ -128,5 +140,6 @@
         private DataGridView dataGridViewProduto;
         private Label label1;
         private ComboBox comboBoxQuantidade;
+        private Button ButtonVisualizar;
     }
 }
