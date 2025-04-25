@@ -14,6 +14,23 @@ namespace GestaoRH
 
 
         {
+            
+            if (string.IsNullOrWhiteSpace(textBoxUsuario.Text) || string.IsNullOrWhiteSpace(textBoxSenha.Text))
+            {
+                MessageBox.Show("Preencha todos os campos!");
+               
+                return; 
+            }
+
+            string senha = textBoxSenha.Text;
+
+            if (senha.Length < 6)
+            {
+                MessageBox.Show("A senha deve ter pelo menos 6 caracteres.");
+                return;
+            }
+
+
 
 
             using (var con = DataBase.GetConnection())

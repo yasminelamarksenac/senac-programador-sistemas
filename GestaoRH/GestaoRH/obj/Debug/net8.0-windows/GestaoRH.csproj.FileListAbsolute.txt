@@ -34,3 +34,4 @@ C:\Users\yasmine.nlamark\Documents\REPOSITORIO DA YASMINE\senac-programador-sist
 C:\Users\yasmine.nlamark\Documents\REPOSITORIO DA YASMINE\senac-programador-sistemas\GestaoRH\GestaoRH\obj\Debug\net8.0-windows\GestaoRH.pdb
 C:\Users\yasmine.nlamark\Documents\REPOSITORIO DA YASMINE\senac-programador-sistemas\GestaoRH\GestaoRH\obj\Debug\net8.0-windows\GestaoRH.genruntimeconfig.cache
 C:\Users\yasmine.nlamark\Documents\REPOSITORIO DA YASMINE\senac-programador-sistemas\GestaoRH\GestaoRH\obj\Debug\net8.0-windows\ref\GestaoRH.dll
+C:\Users\yasmine.nlamark\Documents\REPOSITORIO DA YASMINE\senac-programador-sistemas\GestaoRH\GestaoRH\obj\Debug\net8.0-windows\GestaoRH.FormCadastrarFuncionario.resources
