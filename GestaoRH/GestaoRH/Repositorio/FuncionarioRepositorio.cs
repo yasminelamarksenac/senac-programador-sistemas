@@ -10,8 +10,10 @@ namespace GestaoRH.Repositorio
     {
         private string _conexao = "server=localhost;database=gestaorh;uid=root;pwd=;";
 
-      
+
         public void Inserir(Funcionario funcionario)
+
+
         {
             using (var con = new MySqlConnection(_conexao))
             {
@@ -32,7 +34,7 @@ namespace GestaoRH.Repositorio
             }
         }
 
-      
+
         public List<Funcionario> ObterTodos()
         {
             var lista = new List<Funcionario>();
@@ -97,5 +99,9 @@ namespace GestaoRH.Repositorio
 
             return null;
         }
-    }
+
+       
+
+
+    } 
 }
